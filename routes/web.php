@@ -11,11 +11,14 @@ Route::get('/formulario', function () {
 
 Route::get('/contacto', function (Request $request) {
 
+echo "<h1>Información Recibida</h1>";
     echo "<pre>";
-    print_r($request->get("email"));
-    print_r($request->get("mensaje"));
-     echo "</pre>";
-
+    print_r("Email: " . $request->get("email"));
+    echo "<br>";
+    print_r("Mensaje: " . $request->get("mensaje"));
+    echo "</pre>";
+    
+    echo "<a href='/formulario'>Volver al formulario</a>";
 });
 
 

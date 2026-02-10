@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto Estático | Noel Mendez</title>
+    <title>Contacto | Noel Mendez</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -31,6 +31,7 @@
             width: 100%;
             max-width: 400px;
             border: 1px solid rgba(255,255,255,0.3);
+            text-align: center;
         }
 
         h2 {
@@ -39,7 +40,7 @@
             font-weight: 600;
         }
 
-        p {
+        .subtitle {
             color: #64748b;
             font-size: 0.9rem;
             margin-bottom: 30px;
@@ -101,30 +102,36 @@
             transform: translateY(-2px);
         }
 
-        button:active {
-            transform: translateY(0);
+        .footer-info {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: #94a3b8;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h2>Contacto</h2>
-        <p>Estudiante de Ingeniería de Sistemas - 5to Semestre</p>
+        <h2>Enviar Mensaje</h2>
+        <p class="subtitle">Noel Mendez - Ingeniería de Sistemas</p>
         
-        <form>
+        <form action="/contacto" method="GET">
             <div class="input-group">
                 <label for="email">Tu Correo</label>
-                <input type="email" id="email" placeholder="ejemplo@unab.edu.co">
+                <input type="email" id="email" name="email" placeholder="ejemplo@unab.edu.co" required>
             </div>
 
             <div class="input-group">
-                <label for="msg">Mensaje</label>
-                <textarea id="msg" placeholder="Escribe lo que quieras aquí..."></textarea>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
             </div>
 
-            <button type="button">Enviar (Simulado)</button>
+            <button type="submit">Enviar a Contacto</button>
         </form>
+
+        <div class="footer-info">
+            UNAB • 5to Semestre • 2026
+        </div>
     </div>
 
 </body>
