@@ -1,6 +1,23 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/formulario', function () {
+
+    return view ("form");
+
+});
+
+Route::get('/contacto', function (Request $request) {
+
+    echo "<pre>";
+    print_r($request->get("email"));
+    print_r($request->get("mensaje"));
+     echo "</pre>";
+
+});
+
 
 Route::get('/php-basico', function () {
 
